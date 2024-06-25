@@ -1,0 +1,1304 @@
+
+/*---------------------------------------
+  INICIO DE LA PERSONZALIZACION DE LAS VARIABLES             
+-----------------------------------------*/
+:root {
+  --white-color:                  #ffffff;
+  --primary-color:                #EC671A;
+  --secondary-color:              #ffaa79;
+  --dark-color:                   #000000;
+
+  --font-family:                  'Plus Jakarta Sans', sans-serif;
+  --title-font-family:            'Plus Jakarta Sans', sans-serif;
+
+  --h1-font-size:                 58px;
+  --h2-font-size:                 46px;
+  --h3-font-size:                 32px;
+  --h4-font-size:                 28px;
+  --h5-font-size:                 24px;
+  --h6-font-size:                 22px;
+  --p-font-size:                  20px;
+  --menu-font-size:               14px;
+  --btn-font-size:                18px;
+  --copyright-font-size:          16px;
+
+  --border-radius-large:          100px;
+  --border-radius-medium:         20px;
+  --border-radius-small:          10px;
+
+  --font-weight-normal:           400;
+  --font-weight-medium:           500;
+  --font-weight-semibold:         600;
+  --font-weight-bold:             700;
+}
+/*---------------------------------------
+  FINAL DE LA PERSONZALIZACION DE LAS VARIABLES             
+-----------------------------------------*/
+
+
+/*---------------------------------------
+  INICIO DISEÑO DE LA TIPOGRAFÍA
+-----------------------------------------*/
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font-family); 
+  font-weight: var(--font-weight-semibold);
+}
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-weight-bold);
+}
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-weight-bold);
+}
+h3 {
+  font-size: var(--h3-font-size);
+}
+h4 {
+  font-size: var(--h4-font-size);
+}
+h5 {
+  font-size: var(--h5-font-size);
+}
+h6 {
+  color: var(--primary-color);
+  font-size: var(--h6-font-size);
+}
+p {
+  color: var(--white-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+}
+ul li {
+  color: var(--dark-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+}
+a, 
+button {
+  touch-action: manipulation;
+  transition: all 0.3s;
+}
+a {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-color);
+}
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+/*---------------------------------------
+  FINAL DEL DISEÑO DE LA TIPOGRAFÍA
+-----------------------------------------*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+/* Ajustar tamaño del logo del navbar*/
+.logo {
+  height: 30px;
+  margin-right: 60px;
+}
+
+/* Ajustar tamaño del logo portada*/
+.logo2 {
+  height: 60px;
+}
+
+/* Clases para dar color a los textos*/
+.color{
+  color: white;
+}
+
+/* Clases para dar color a los textos*/
+.highlight {
+  color: #EC671A;
+}
+
+/*Diseño de las filas*/
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/*Diseño de las columnas*/
+.column {
+  width: 30%;
+  padding: 20px;
+  position: relative;
+}
+
+/*Diseño de los botones*/
+.colorbutton {
+  background-color: var(--dark-color);
+  border-color: var(--white-color);
+  color: var(--white-color);
+}
+.colorbuttons {
+  background: linear-gradient(to top, #EC671A, #863a0f);
+  border-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+/*Diseño del contenedor de footer*/
+.container-footer {
+  position: relative;
+  z-index: 2;
+  color: white;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-top: 100px;
+  padding-left: 3em;
+}
+
+/*Diseño del padding del footer*/
+.section-padding {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+/*Diseño de los iconos de las redes sociales*/
+.icon{
+  display: inline-block;
+  font-size: var(--h4-font-size);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/*<---Inicio del diseño de la portada--->*/
+.front_page-section {
+  background-image: url('../images/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+
+.front_page-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.front_page-section > *:not(.overlay) {
+  position: relative;
+  z-index: 2;
+}
+/*<---Final del diseño de la portada--->*/
+
+
+
+/*---------------------------------------
+  INICIO DEL DISEÑO DE LA VISTA CANCIONES
+-----------------------------------------*/
+
+/*Contenedor donde estara toda la informacion*/
+.containerSong {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/*Diseño de la columna donde esta la imagen*/
+.columns img {
+  width: 100%;
+  border: 20px solid #828282;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/*Tamaño de la imagen*/
+.imageSong {
+  width: 100%;
+  height: auto;
+}
+
+/*Separacion entre las columnas*/
+.columns {
+  padding: 20px;
+}
+
+/*Diseño de la informacion de las columnas*/
+.icon-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Fondo gris del reproductor de preview de musica*/
+.containerMusic{
+  width: auto; 
+  height: auto; 
+  position: relative; 
+  background: #464646; 
+  border-radius: 25px;
+}
+
+/* Alineacion de lo que esta dentro del fondo gris*/
+.player {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Alineacion de los botones del reproductor*/
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Diseño del icono pausa/reproducir*/
+.button {
+  width: 18px;
+  height: 22px;
+  background: white;
+  border: 1.5px solid white;
+  position: relative;
+}
+
+/*<---Incio del diseño del boton pausa/reproducir--->*/
+.play-pause {
+  width: 43px;
+  height: 43px;
+  background: linear-gradient(85deg, #EC900A 0%, #863A0E 86%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-pause::before,
+.play-pause::after {
+  content: "";
+  width: 5px;
+  height: 16px;
+  background: white;
+  position: absolute;
+  align-items: center;
+}
+.play-pause::before {
+  left: 13px;
+}
+.play-pause::after {
+  left: 23px;
+}
+/*<---Final del diseño del boton pausa/reproducir--->*/
+
+
+/*<---Incio del diseño de la barra de progreso del reproductor--->*/
+.progress-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+.progress-bar-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #888888;
+  border-radius: 10px;
+  position: relative;
+}
+.progress-filled {
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(94deg, #FFF3B6 0%, #EC900A 36%, #863A0E 72%);
+  border-radius: 10px;
+}
+.progress-thumb {
+  width: 15px;
+  height: 15px;
+  background: #863A0E;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  left: 70%;
+  transform: translateX(-50%);
+}
+/*<---Final del diseño de la barra de progreso del reproductor--->*/
+
+
+/*<---Incio del diseño de la duracion de inicio y final del reproductor--->*/
+.time {
+  color: #F1F1F1;
+  font-size: 10px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  position: absolute;
+  top: 10px;
+}
+.start-time {
+  left: 0;
+}
+.end-time {
+  right: 0;
+}
+/*<---Final del diseño de la duracion de inicio y final del reproductor--->*/
+
+
+/*<---Incio del diseño del volumen del reproductor--->*/
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.volume-bar {
+  width: 58px;
+  height: 5px;
+  background: #464646;
+  border-radius: 33px;
+  position: relative;
+}
+.volume-filled {
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(94deg, #FFF3B6 0%, #EC671A 34%, #863A0E 74%);
+  border-radius: 33px;
+}
+.volume-thumb {
+  width: 15px;
+  height: 15px;
+  background: #863A0E;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 80%;
+  transform: translateX(-50%);
+}
+/*<---Final del diseño del volumen del reproductor--->*/
+
+/*---------------------------------------
+  FINAL DEL DISEÑO DE LA VISTA CANCIONES
+-----------------------------------------*/
+
+
+
+/*---------------------------------------
+  INICIO DEL DISEÑO DE LA VISTA EVENTOS
+-----------------------------------------*/
+
+/* Diseño del fondo degradado*/
+.concert-info {
+  position: relative;
+  border-radius: 0 20px 20px 0;
+  background: linear-gradient(295deg, rgba(38, 38, 38, 0.20) 66%, rgba(236, 144, 10, 0.20) 99%), 
+              linear-gradient(273deg, rgba(245, 206, 107, 0.20) 2%, rgba(38, 38, 38, 0.20) 100%);
+  height: 160px;
+}
+
+/* Diseño de la imagen*/
+.concert-image {
+  border-radius: 20px 0 0 20px;
+  width: 105%;
+  height: 160PX;
+  object-fit: cover;
+}
+
+
+/*<---Inicio del diseño del texto--->*/
+.concert-date {
+  color: #EC671A;
+  font-size: 30px;
+  font-weight: 700;
+}
+.concert-location {
+  font-size: 26px;
+  font-weight: 700;
+}
+.concert-description {
+  font-size: 16px;
+  font-weight: 600;
+}
+/*<---Final del diseño del texto--->*/
+
+/*---------------------------------------
+  FINAL DEL DISEÑO DE LA VISTA EVENTOS
+-----------------------------------------*/
+
+
+/*---------------------------------------
+  INICIO DEL DISEÑO DE LA VISTA GALERIA
+-----------------------------------------*/
+
+/*<---Inicio del diseño de la galeria--->*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 81%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.gallery .image-container .ImageGaleryBig{
+  height: 615px;
+  width: 300px;
+}
+.gallery .image-container .ImageGalery{
+  height: 300px;
+  width: 300px;
+}
+.gallery .image-container {
+  position: relative;
+  overflow: hidden;
+}
+.gallery .image-container:hover .info {
+  opacity: 1;
+}
+/*<---Final del diseño de la galeria--->*/
+
+
+/*<---Inicio del diseño de la informacion estadistica--->*/
+.stat-box {
+  background: linear-gradient(to right, #EC671A, #863a0f);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+.stat-box h4 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.stat-box p {
+  font-size: 15px;
+  font-weight: 500;
+}
+.stat-box .number {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+/*<---Final del diseño de la informacion estadistica--->*/
+
+
+/*<---Inicio del diseño de los colaboradores--->*/
+.collaborator .collaborator-item .collaborator-img {
+  position: relative;
+}
+.collaborator .collaborator-item .collaborator-img .collaborator-icon {
+  position: absolute;
+  bottom: 0; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  margin-bottom: -50px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--white-color);
+  background: linear-gradient(to top, #EC671A, #863a0f);
+  z-index: 9;
+  border-radius: 15px;
+  width: 70%;
+}
+.collaborator .collaborator-item .collaborator-img .collaborator-icon-album {
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  margin-bottom: -40px;
+  display: flex;
+  justify-content: end;
+  background: var(--white-color);
+  z-index: 9;
+  border-radius: 25px;
+  width: 15%;
+  height: 40px;
+}
+.collaborator .collaborator-item .collaborator-img .collaborator-img-efects .img-fluid-album{
+  height: 250px;
+}
+.collaborator .collaborator-item .collaborator-img .collaborator-img-efects {
+  position: relative;
+  overflow: hidden;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.collaborator .collaborator-item .collaborator-img .collaborator-img-efects::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.collaborator .collaborator-item:hover .collaborator-img-efects::after {
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.collaborator .collaborator-item .collaborator-img-efects img {
+  transition: 0.5s;
+}
+.collaborator .collaborator-item:hover .collaborator-img-efects img {
+  transform: scale(1.1);
+}
+.collaborator .collaborator-item .collaborator-title {
+  position: relative;
+  background: var(--white-color);
+  background-size: cover;
+  height: auto;
+  width: auto;
+  transition: 0.5s;
+}
+.collaborator .collaborator-item .collaborator-title::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: 0.5s;
+}
+.collaborator .collaborator-item:hover .collaborator-title::after {
+  height: 100%;
+  background: var(--primary-color) !important;
+  color: var(--white-color);
+}
+.collaborator .collaborator-item .collaborator-title .collaborator-title-inner,
+.collaborator .collaborator-item:hover .collaborator-title .collaborator-title-inner h4 {
+  transition: 0.5s;
+}
+.collaborator .collaborator-item:hover .collaborator-title .collaborator-title-inner {
+  position: relative;
+  color: var(--bs-white) !important;
+  z-index: 2;
+}
+.collaborator .collaborator-item:hover .collaborator-title .collaborator-title-inner h4 {
+  color: var(--bs-white);
+}
+
+.collaborator .collaborator-item .collaborator-title2::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: 0.5s;
+}
+.collaborator .collaborator-item:hover .collaborator-title2::after {
+  height: 100%;
+  background: var(--primary-color) !important;
+  color: var(--white-color);
+}
+.collaborator .collaborator-item .collaborator-title2 .collaborator-title-inner,
+.collaborator .collaborator-item:hover .collaborator-title2 .collaborator-title-inner h4 {
+  transition: 0.5s;
+}
+.collaborator .collaborator-item:hover .collaborator-title2 .collaborator-title-inner {
+  position: relative;
+  color: var(--white-color) !important;
+  z-index: 2;
+}
+.collaborator .collaborator-item:hover .collaborator-title2 .collaborator-title-inner h4 {
+  color: var(--white-color);
+}
+.collaborator .collaborator-item:hover .collaborator-title2 .collaborator-title-inner h7 {
+  color: var(--white-color);
+}
+.pie-ImageOne {
+  position: relative;
+  background: url('/images/ImageBiography.png') no-repeat center center;
+  background-size: cover;
+  height: 120px;
+  width: auto;
+  transition: 0.5s;
+}
+.pie-ImageTwo {
+  position: relative;
+  background: url('/images/Colaborator2.png') no-repeat center center;
+  background-size: cover;
+  height: 120px;
+  width: auto;
+  transition: 0.5s;
+}
+.pie-ImageThree {
+  position: relative;
+  background: url('/images/ImageGalery2.png') no-repeat center center;
+  background-size: cover;
+  height: 120px;
+  width: auto;
+  transition: 0.5s;
+}
+.pie-ImageFour {
+  position: relative;
+  background: url('/images/FrontPage.png') no-repeat center center;
+  background-size: cover;
+  height: 120px;
+  width: auto;
+  transition: 0.5s;
+}
+
+/*<---Final del diseño de los colaboradores--->*/
+
+/*---------------------------------------
+  FINAL DEL DISEÑO DE LA VISTA GALERIA
+-----------------------------------------*/
+
+
+/*---------------------------------------
+  INICIO DEL DISEÑO DE LA VISTA INICIO
+-----------------------------------------*/
+
+/*<---Inicio del diseño de los iconos de mis servicios--->*/
+.accordion-button .custom-arrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.button-text {
+  flex-grow: 1;
+}
+.icon-singer {
+  height: 30px;
+  width: 20px;
+  margin-right: 3px;
+}
+/*<---Final del diseño de los iconos de mis servicios--->*/
+
+
+/*Diseño del fondo de lo input de contacto*/
+.background-color{
+  background-color: #484848;
+  border-color: #484848;
+}
+
+/*Tamaño de la imagen de la portada*/
+.side-image {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/*Diseño del fondo de la informacion de jairo*/
+.scrollable-section {
+  background-color: #161313;
+  padding: 3em 2em;
+  color: white;
+  height: auto;
+}
+
+/*Diseño de la informacion de jairo*/
+.section-content {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+/*Diseño de la imagen de la informacion de jairo*/
+.section-image {
+  width: 50%;
+  max-width: 50%;
+  height: 345PX;
+  object-fit: cover;
+  background-image: url('../images/Jairo 6.png');
+  border-radius: 20px;
+  border-color: #FFA500;
+}
+
+/*Diseño de fondo de la informacion de jairo*/
+.text-content {
+  flex-grow: 1;
+  background: linear-gradient(295deg, rgba(38, 38, 38, 0.20) 66%, rgba(236, 144, 10, 0.20) 99%), 
+              linear-gradient(273deg, rgba(245, 206, 107, 0.20) 2%, rgba(38, 38, 38, 0.20) 100%);  border-color: #FFA500;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/*<---Inicio del diseño de los servicios de jairo--->*/
+.services-section {
+  background-color: #171616;
+  color: white;
+  position: relative;
+  padding: 20px;
+}
+.services-section .accordion-item {
+  border: 0;
+  background-color: #171616;
+}
+.services-section .accordion-button {
+  font-size: var(--h6-font-size);
+  font-weight: var(--font-weight-semibold);
+  background-color: #171616;
+  color: var(--white-color);
+  border-color: var(--primary-color);
+}
+.services-section .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  color: var(--primary-color);
+}
+.services-section .accordion-body {
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  line-height: 40px;
+}
+.services-section::before {
+  top: 0;
+  left: 0;
+}
+.services-section::after {
+  bottom: 0;
+  right: 0;
+}
+/*<---Final del diseño de los servicios de jairo--->*/
+
+
+/*<---Inicio del diseño del footer--->*/
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  border-radius: 10px;
+  margin-top: -50px;
+}
+.site-footer .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.site-footer {
+  background-image: url('../images/MG_8859_Copia.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+/*<---Final del diseño del footer--->*/
+
+/*---------------------------------------
+  FINAL DEL DISEÑO DE LA VISTA INICIO
+-----------------------------------------*/
+
+
+
+/*---------------------------------------
+  INICIO DEL DISEÑO DE LA VISTA BIOGRAFÍA
+-----------------------------------------*/
+
+/*<---Inicio del diseño de la biografia--->*/
+.biography-section {
+  position: relative;
+  padding-bottom: 20px;
+  background-image: url('../images/MG_8859.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.biography-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.biography-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+/*<---Final del diseño de la biografia--->*/
+
+
+/*<---Inicio del diseño de la biografia--->*/
+.timeline-section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-color: #161313;
+}
+.timeline-container .vertical-scrollable-timeline {
+  list-style-type: none;
+  position: relative;
+  padding-left: 0;
+}
+.timeline-container .vertical-scrollable-timeline .list-progress {
+  width: 8px;
+  height: 87%;
+  background-color: var(--secondary-color);
+  position: absolute;
+  left: 52px;
+  top: 0;
+  overflow: hidden;
+}
+.timeline-container .vertical-scrollable-timeline .list-progress .inner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: var(--secondary-color);
+  width: 100%;
+}
+.timeline-container .vertical-scrollable-timeline li {
+  position: relative;
+  padding: 20px 0px 65px 145px;
+}
+.timeline-container .vertical-scrollable-timeline li:last-child {
+  padding-bottom: 0;
+}
+.timeline-container .vertical-scrollable-timeline li p {
+  line-height: 40px;
+}
+.timeline-container .vertical-scrollable-timeline li p:last-child {
+  margin-bottom: 0;
+}
+.timeline-container .vertical-scrollable-timeline li .icon-holder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 104px;
+  height: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  z-index: 1;
+  transition: 0.4s all;
+}
+.timeline-container .vertical-scrollable-timeline li .icon-holder::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 4px solid #fff;
+  position: absolute;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.4s all;
+}
+.timeline-container .vertical-scrollable-timeline li .icon-holder i {
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+.timeline-container .vertical-scrollable-timeline li::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 8px;
+  background-color: transparent;
+  left: 52px;
+  z-index: 0;
+}
+.timeline-container .vertical-scrollable-timeline li.active .icon-holder {
+  background-color: var(--primary-color);
+}
+.timeline-container .vertical-scrollable-timeline li.active .icon-holder::before {
+  background-color: var(--primary-color);
+}
+/*<---Final del diseño de la biografia--->*/
+
+
+/*---------------------------------------
+  BARRA DE NAVEGACION              
+-----------------------------------------*/
+
+/*<---Ihicio del diseño del navbar--->*/
+.navbar {
+  background-color: var(--dark-color);
+  border-bottom: 1px solid rgba(255, 128, 0, 0.682);
+  z-index: 10;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  border-radius: var(--border-radius-large);
+  margin: 10px;
+  padding: 10px;
+}
+.navbar-nav .nav-link {
+  display: inline-block;
+  color: var(--white-color);
+  font-family: var(--title-font-family); 
+  font-size: var(--menu-font-size);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+}
+
+.navbar .dropdown-menu {
+  background: var(--white-color);
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  border: 0;
+  display: inherit;
+  opacity: 0;
+  min-width: 9rem;
+  margin-top: 20px;
+  padding: 13px 0 10px 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+.navbar .dropdown-menu::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid var(--white-color);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+.navbar .dropdown-item {
+  display: inline-block;
+  font-family: var(--title-font-family); 
+  font-size: var(--menu-font-size);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.navbar .dropdown-item.active, 
+.navbar .dropdown-item:active,
+.navbar .dropdown-item:focus, 
+.navbar .dropdown-item:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+.navbar .dropdown-toggle::after {
+  content: "\f282";
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-size: var(--copyright-font-size);
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  left: 2px;
+  border: 0;
+}  
+.navbar-icon:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+.navbar-toggler {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  margin: 0;
+  width: 30px;
+  height: 35px;
+  outline: none;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background: transparent;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  top: 0;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(-45deg);
+}
+.navbar-toggler .navbar-toggler-icon {
+  background: var(--white-color);
+  transition: background 10ms 300ms ease;
+  display: block;
+  width: 30px;
+  height: 2px;
+  position: relative;
+}
+.navbar-toggler .navbar-toggler-icon:before,
+.navbar-toggler .navbar-toggler-icon:after {
+  transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background: var(--white-color);
+  width: 30px;
+  height: 2px;
+  content: '';
+}
+.navbar-toggler .navbar-toggler-icon::before {
+  top: -8px;
+}
+.navbar-toggler .navbar-toggler-icon::after {
+  top: 8px;
+}
+/*<---Final del diseño del navbar--->*/
+
+
+
+
+
+
+/*---------------------------------------
+  STILOS RESPONSIVOS            
+-----------------------------------------*/
+@media (max-width: 1200px) {
+  .containerSong {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .containerSong {
+    grid-template-columns: 1fr;
+  }
+  .columns {
+    width: 100%;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .section-image{
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .stat-section .row {
+      margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .gallery {
+      display: block;
+  }
+  .gallery .column {
+      margin-bottom: 15px;
+  }
+}
+@media (max-width: 990px) {
+  .concert-info {
+      border-radius: 0 0 20px 20px;
+      height: 200px;
+      width:94%;
+      margin-left: 10px;
+  }
+  .concert-image {
+      border-radius: 20px 20px 0 0;
+      height: 200px;
+      width: 100%;
+  }
+  .concert-date, .concert-location, .concert-description {
+      font-size: 18px;
+      font-weight: 600;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    margin-top: 0;
+    pointer-events: auto;
+  }
+}
+@media (max-width: 768px) {
+  .section-content {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+  .section-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .navbar-nav .dropdown-menu {
+    position: relative;
+    left: 10px;
+    opacity: 1;
+    pointer-events: auto;
+    max-width: 155px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .navbar-expand-lg .navbar-nav {
+    padding-bottom: 20px;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+  }
+  .nav-tabs .nav-link:first-child {
+    margin-right: 5px;
+  }
+  .nav-tabs .nav-link {
+    font-size: var(--copyright-font-size);
+    padding: 10px;
+  }
+  .featured-section {
+    border-radius: 0 0 80px 80px;
+    padding-bottom: 50px;
+  }
+  .custom-block-topics-listing .custom-block-image {
+    width: auto;
+  }
+  .custom-block-topics-listing > .d-flex,
+  .custom-block-topics-listing-info,
+  .custom-block-topics-listing a {
+    flex-direction: column;
+  }
+  .timeline-container .vertical-scrollable-timeline .list-progress {
+    height: 75%;
+  }
+  .timeline-container .vertical-scrollable-timeline li {
+    padding-left: 135px;
+  }
+  .subscribe-form-wrap {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .front_page-section {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
+}
+@media (max-width: 768px) {
+  .front_page-section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+}
+@media (max-width: 480px) {
+  .front_page-section {
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+  }
+}
