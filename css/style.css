@@ -120,7 +120,10 @@ html, body {
   height: 30px;
   margin-right: 60px;
 }
-
+.accordion-button::after {
+  filter: invert(1);
+  color: var(--primary-color) !important;
+}
 /* Ajustar tamaño del logo portada*/
 .logo2 {
   height: 60px;
@@ -134,6 +137,11 @@ html, body {
 /* Clases para dar color a los textos*/
 .highlight {
   color: #EC671A;
+}
+
+/* centrar botones de la portada */
+.center-button{
+  text-align: center;
 }
 
 /*Diseño de las filas*/
@@ -171,7 +179,8 @@ html, body {
   align-items: center;
   height: 100%;
   padding-top: 100px;
-  padding-left: 3em;
+  padding-left: 30px;
+padding-right: 30px;
 }
 
 /*Diseño del padding del footer*/
@@ -202,7 +211,16 @@ html, body {
   padding-top: 300px;
   padding-bottom: 300px;
 }
-
+.front_page-galery-section {
+  background-image: url('../images/portadaGalery.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
 .front_page-section .overlay {
   position: absolute;
   top: 0;
@@ -212,7 +230,20 @@ html, body {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
+.front_page-galery-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 .front_page-section > *:not(.overlay) {
+  position: relative;
+  z-index: 2;
+}
+.front_page-galery-section > *:not(.overlay) {
   position: relative;
   z-index: 2;
 }
@@ -485,7 +516,7 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 81%;
+  width: 94%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   color: white;
@@ -496,12 +527,12 @@ html, body {
   transition: opacity 0.5s;
 }
 .gallery .image-container .ImageGaleryBig{
-  height: 615px;
-  width: 300px;
+  height: 716px;
+  width: 349px;
 }
 .gallery .image-container .ImageGalery{
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
 }
 .gallery .image-container {
   position: relative;
@@ -519,13 +550,14 @@ html, body {
   border-radius: 10px;
   padding: 20px;
   position: relative;
+  height: 300px;
 }
 .stat-box h4 {
   font-size: 25px;
   font-weight: 600;
 }
 .stat-box p {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
 }
 .stat-box .number {
@@ -668,7 +700,7 @@ html, body {
 }
 .pie-ImageOne {
   position: relative;
-  background: url('/images/ImageBiography.png') no-repeat center center;
+  background: url('../images/ImageBiography.png') no-repeat center center;
   background-size: cover;
   height: 120px;
   width: auto;
@@ -676,7 +708,7 @@ html, body {
 }
 .pie-ImageTwo {
   position: relative;
-  background: url('/images/Colaborator2.png') no-repeat center center;
+  background: url('../images/Colaborator2.png') no-repeat center center;
   background-size: cover;
   height: 120px;
   width: auto;
@@ -684,7 +716,7 @@ html, body {
 }
 .pie-ImageThree {
   position: relative;
-  background: url('/images/ImageGalery2.png') no-repeat center center;
+  background: url('../images/ImageGalery2.png') no-repeat center center;
   background-size: cover;
   height: 120px;
   width: auto;
@@ -692,13 +724,60 @@ html, body {
 }
 .pie-ImageFour {
   position: relative;
-  background: url('/images/FrontPage.png') no-repeat center center;
+  background: url('../images/FrontPage.png') no-repeat center center;
   background-size: cover;
   height: 120px;
   width: auto;
   transition: 0.5s;
 }
-
+.pie-ImageOne .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.pie-ImageOne  > *:not(.overlay) {
+  position: relative;
+  z-index: 2;
+}
+.pie-ImageTwo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.pie-ImageTwo  > *:not(.overlay) {
+  position: relative;
+  z-index: 2;
+}
+.pie-ImageThree .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.pie-ImageThree  > *:not(.overlay) {
+  position: relative;
+  z-index: 2;
+}
+.pie-ImageFour .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.pie-ImageFour  > *:not(.overlay) {
+  position: relative;
+  z-index: 2;
+}
 /*<---Final del diseño de los colaboradores--->*/
 
 /*---------------------------------------
@@ -823,9 +902,9 @@ html, body {
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 2em;
+  align-items: start;
   border-radius: 10px;
+  padding-top: 30px;
   margin-top: -50px;
 }
 .site-footer .overlay {
@@ -844,6 +923,15 @@ html, body {
   position: relative;
   padding-top: 1px;
   padding-bottom: 1px;
+}
+.separator-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.separator-row a:not(:last-child)::after {
+  content: "|";
+  margin: 0 5px;
 }
 /*<---Final del diseño del footer--->*/
 
@@ -1162,11 +1250,25 @@ html, body {
   }
 }
 @media (max-width: 768px) {
+  .stat-box {
+    height: 350px;
+    font-size: 20px;
+  }
+  .stat-box p{
+      font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
   .gallery {
       display: block;
+      width: 100%;
   }
   .gallery .column {
       margin-bottom: 15px;
+  }
+  .gallery .info {
+    width: 100%;
+    height: 100%;
   }
 }
 @media (max-width: 990px) {
