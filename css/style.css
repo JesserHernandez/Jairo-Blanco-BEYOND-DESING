@@ -126,7 +126,7 @@ html, body {
 }
 /* Ajustar tamaño del logo portada*/
 .logo2 {
-  height: 60px;
+  height: 55px;
 }
 
 /* Clases para dar color a los textos*/
@@ -1224,12 +1224,33 @@ padding-right: 30px;
 /*---------------------------------------
   STILOS RESPONSIVOS            
 -----------------------------------------*/
+
 @media (max-width: 1200px) {
+  .front_page-section {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
+  .front_page-galery-section {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
   .containerSong {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 768px) {
+  .front_page-section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .front_page-galery-section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .center-button {
+    width: 60%;
+    margin-left: 10px;
+  }
   .containerSong {
     grid-template-columns: 1fr;
   }
@@ -1237,30 +1258,22 @@ padding-right: 30px;
     width: 100%;
     padding: 10px;
   }
-}
-@media (max-width: 768px) {
   .section-image{
     width: 100%;
     max-width: 100%;
   }
-}
-@media (max-width: 768px) {
   .stat-section .row {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
-}
-@media (max-width: 768px) {
   .stat-box {
     height: 350px;
     font-size: 20px;
   }
   .stat-box p{
-      font-size: 22px;
+      font-size: 20px;
   }
-}
-@media (max-width: 768px) {
   .gallery {
-      display: block;
+    display: block;
       width: 100%;
   }
   .gallery .column {
@@ -1384,23 +1397,5 @@ padding-right: 30px;
   }
   h5 {
     font-size: 20px;
-  }
-}
-@media (max-width: 1200px) {
-  .front_page-section {
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-  }
-}
-@media (max-width: 768px) {
-  .front_page-section {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-  }
-}
-@media (max-width: 480px) {
-  .front_page-section {
-    padding-top: 8vh;
-    padding-bottom: 8vh;
   }
 }
